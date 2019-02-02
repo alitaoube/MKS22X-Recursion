@@ -16,13 +16,12 @@ public class recursion{
     }
 
     public static double sq(double n, double tolerance, double guess){
-      System.out.println("n STATEMENT: " + n / guess*guess + "TOLERANCE: " + tolerance);
+      System.out.println("n : " + n + ", GUESS: " + guess + " N DIVIDED BY GUESS: " + (n / guess) + ", TOLERANCE: " + tolerance);
       if (n / guess <= tolerance){
         System.out.println("HERE");
         return guess;
       }
-      guess = (n / guess + guess) / 2;
-      return sq(n, tolerance, guess);
+      return sq(n, tolerance, (n / guess + guess) / 2) ;
     }
 
 
