@@ -15,6 +15,7 @@ public class recursion{
       if (guess*guess / n <= tolerance){
         return guess;
       }
+      return sq(n, tolerance, ((n / guess + guess) / 2));
     }
 
     /*Recursively find the n'th fibbonaci number in linear time
