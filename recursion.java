@@ -9,7 +9,12 @@ public class recursion{
 
     */
     public static double sqrt(double n, double tolerance){
+    }
 
+    public double sq(double n, double tolerance, double guess){
+      if (guess*guess / n <= tolerance){
+        return guess;
+      }
     }
 
     /*Recursively find the n'th fibbonaci number in linear time
