@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class recursion{
   public static void main(String[] args) {
-    System.out.println(sqrt(100, 1));
+    System.out.println(sqrt(572495742, .5) == Math.sqrt(572495742)) ;
   }
     /*You may write additional private methods */
 
