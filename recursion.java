@@ -3,6 +3,7 @@ import java.util.ArrayList;
 public class recursion{
   public static void main(String[] args) {
     System.out.println(sqrt(572495742, .5) == Math.sqrt(572495742)) ;
+    System.out.println(sqrt(.000003158385, .00014) ==  Math.sqrt(.000003158385));
   }
     /*You may write additional private methods */
 
@@ -17,7 +18,7 @@ public class recursion{
 
     public static double sq(double n, double tolerance, double guess){
       System.out.println("n : " + n + ", GUESS: " + guess + ", N DIVIDED BY GUESS SQUARED: " + (n / (guess* guess)) + ", TOLERANCE: " + tolerance);
-      if (n / (guess*guess) == tolerance){
+      if (guess * guess < n && n / (guess*guess) <= tolerance || n / (guess*guess) == 1){
         // System.out.println("HERE");
         return guess;
       }
