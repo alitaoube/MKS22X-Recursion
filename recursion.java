@@ -9,9 +9,10 @@ public class recursion{
 
     */
     public static double sqrt(double n, double tolerance){
+      return sq(n, tolerance, 1);
     }
 
-    public double sq(double n, double tolerance, double guess){
+    public static double sq(double n, double tolerance, double guess){
       if (guess*guess / n <= tolerance){
         return guess;
       }
