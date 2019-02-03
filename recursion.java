@@ -3,17 +3,27 @@ import java.util.ArrayList;
 public class recursion{
   public static void main(String[] args) {
 
-    System.out.println(sqrt(572495742, .0000000000001) == Math.sqrt(572495742) ) ;
-    System.out.println(Math.sqrt(572495742));
-    System.out.println(sqrt(572495742, .0000000000001));
+    // System.out.println(sqrt(572495742, .0000000000001) == Math.sqrt(572495742) ) ;
+    // System.out.println(Math.sqrt(572495742));
+    // System.out.println(sqrt(572495742, .0000000000001));
+    //
+    // System.out.println();
+    //
+    // System.out.println(sqrt(51458921, .1) == Math.sqrt(51458921));
+    // System.out.println(sqrt(51458921, .1));
+    // System.out.println(Math.sqrt(51458921));
 
-    System.out.println();
-
-    System.out.println(sqrt(51458921, .1) == Math.sqrt(51458921));
-    System.out.println(sqrt(51458921, .1));
-    System.out.println(Math.sqrt(51458921));
-
-
+    System.out.println(fib(0));
+    System.out.println(fib(1));
+    System.out.println(fib(2));
+    System.out.println(fib(3));
+    System.out.println(fib(4));
+    System.out.println(fib(5));
+    System.out.println(fib(6));
+    System.out.println(fib(7));
+    System.out.println(fib(8));
+    System.out.println(fib(9));
+    System.out.println(fib(10));
 
   }
     /*You may write additional private methods */
@@ -40,12 +50,25 @@ public class recursion{
     //  *fib(0) = 1; fib(1) = 1; fib(5) = 5
     //  *precondition: n is non-negative
     //  */
-    // public static int fib(int n){
-    //
-    // }
+    public static int fib(int n){
+      if (n <= 1){
+        return n;
+      }
+      return fib(n-2) + fib(n-1);
+    }
     //
     // /*As Per classwork*/
-    // public static ArrayList<Integer> makeAllSums(){
-    // }
+    public static ArrayList<Integer> makeAllSums(int n){
+      return mSum(0, n);
+    }
+
+    public static ArrayList<Integer> mSum(int start, int n){
+      ArrayList<Integer> output = new ArrayList<Integer>();
+
+      if (start > n){
+        return output;
+      }
+
+    }
 
 }
