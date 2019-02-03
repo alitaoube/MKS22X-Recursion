@@ -59,16 +59,19 @@ public class recursion{
     //
     // /*As Per classwork*/
     public static ArrayList<Integer> makeAllSums(int n){
-      return mSum(0, n);
+      return mSum(0, 0, n);
     }
 
-    public static ArrayList<Integer> mSum(int start, int n){
+    public static ArrayList<Integer> mSum(int start, int top, int n){
       ArrayList<Integer> output = new ArrayList<Integer>();
 
-      if (start > n){
+      if (n < 0 || start == n+1){
         return output;
       }
 
+      output.add(start + top);
+
+      return mSum(start+1, top-1, n);
     }
 
 }
