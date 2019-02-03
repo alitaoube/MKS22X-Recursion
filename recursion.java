@@ -13,18 +13,19 @@ public class recursion{
     // System.out.println(sqrt(51458921, .1));
     // System.out.println(Math.sqrt(51458921));
 
-    System.out.println(fib(0));
-    System.out.println(fib(1));
-    System.out.println(fib(2));
-    System.out.println(fib(3));
-    System.out.println(fib(4));
-    System.out.println(fib(5));
-    System.out.println(fib(6));
-    System.out.println(fib(7));
-    System.out.println(fib(8));
-    System.out.println(fib(9));
-    System.out.println(fib(10));
+    // System.out.println(fib(0));
+    // System.out.println(fib(1));
+    // System.out.println(fib(2));
+    // System.out.println(fib(3));
+    // System.out.println(fib(4));
+    // System.out.println(fib(5));
+    // System.out.println(fib(6));
+    // System.out.println(fib(7));
+    // System.out.println(fib(8));
+    // System.out.println(fib(9));
+    // System.out.println(fib(10));
 
+    System.out.println(makeAllSums(5));
   }
     /*You may write additional private methods */
 
@@ -59,19 +60,20 @@ public class recursion{
     //
     // /*As Per classwork*/
     public static ArrayList<Integer> makeAllSums(int n){
-      return mSum(0, 0, n);
+      ArrayList<Integer> output = new ArrayList<Integer>();
+      return mSum(n, n, output);
     }
 
-    public static ArrayList<Integer> mSum(int start, int top, int n){
-      ArrayList<Integer> output = new ArrayList<Integer>();
-
-      if (n < 0 || start == n+1){
-        return output;
+    public static ArrayList<Integer> mSum(int start, int n, ArrayList<Integer> output){
+      if (n == 0){
+        output.add(start);
       }
 
-      output.add(start + top);
+      mSum(start + n, n--, output);
+      mSum(start, n--, output);
 
-      return mSum(start+1, top-1, n);
+      return output;
+
     }
 
 }
