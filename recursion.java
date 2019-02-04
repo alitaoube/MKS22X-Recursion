@@ -25,7 +25,9 @@ public class recursion{
     // System.out.println(fib(9));
     // System.out.println(fib(10));
 
-    System.out.println(makeAllSums(5));
+    System.out.println(makeAllSums(3));
+    System.out.println(makeAllSums(-2));
+
   }
     /*You may write additional private methods */
 
@@ -61,16 +63,19 @@ public class recursion{
     // /*As Per classwork*/
     public static ArrayList<Integer> makeAllSums(int n){
       ArrayList<Integer> output = new ArrayList<Integer>();
-      return mSum(n, n, output);
+      return mSum(n, 0, output);
     }
 
-    public static ArrayList<Integer> mSum(int start, int n, ArrayList<Integer> output){
+    public static ArrayList<Integer> mSum(int n, int start, ArrayList<Integer> output){
       if (n == 0){
         output.add(start);
       }
 
-      mSum(start + n, n--, output);
-      mSum(start, n--, output);
+      if (n > 0){
+        n--;
+        mSum(n, start + n + 1, output);
+        mSum(n, start, output);
+      }
 
       return output;
 
