@@ -3,30 +3,37 @@ import java.util.ArrayList;
 public class recursion{
   public static void main(String[] args) {
 
-    // System.out.println(sqrt(572495742, .0000000000001) == Math.sqrt(572495742) ) ;
-    // System.out.println(Math.sqrt(572495742));
-    // System.out.println(sqrt(572495742, .0000000000001));
-    //
-    // System.out.println();
-    //
-    // System.out.println(sqrt(51458921, .1) == Math.sqrt(51458921));
-    // System.out.println(sqrt(51458921, .1));
-    // System.out.println(Math.sqrt(51458921));
+    System.out.println("SQRT FUNCTION TESTING");
+    System.out.println(sqrt(572495742, .0000000000001) == Math.sqrt(572495742) ) ;
+    System.out.println(Math.sqrt(572495742));
+    System.out.println(sqrt(572495742, .0000000000001));
+    System.out.println(sqrt(51458921, .1) == Math.sqrt(51458921));
+    System.out.println(sqrt(51458921, .1));
+    System.out.println(Math.sqrt(51458921));
 
-    // System.out.println(fib(0));
-    // System.out.println(fib(1));
-    // System.out.println(fib(2));
-    // System.out.println(fib(3));
-    // System.out.println(fib(4));
-    // System.out.println(fib(5));
-    // System.out.println(fib(6));
-    // System.out.println(fib(7));
-    // System.out.println(fib(8));
-    // System.out.println(fib(9));
-    // System.out.println(fib(10));
+
+    System.out.println();
+
+    System.out.println("FIBBONACI TESTING");
+    System.out.println(fib(0));
+    System.out.println(fib(1));
+    System.out.println(fib(2));
+    System.out.println(fib(3));
+    System.out.println(fib(4));
+    System.out.println(fib(5));
+    System.out.println(fib(6));
+    System.out.println(fib(7));
+    System.out.println(fib(8));
+    System.out.println(fib(9));
+    System.out.println(fib(10));
+
+    System.out.println();
+
+    System.out.println("MAKEALLSUMS TESTING");
 
     System.out.println(makeAllSums(3));
-    System.out.println(makeAllSums(-2));
+    System.out.println(makeAllSums(4));
+    System.out.println(makeAllSums(5));
 
   }
     /*You may write additional private methods */
