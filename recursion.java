@@ -13,6 +13,7 @@ public class recursion{
     }
 
     public static double sq(double n, double tolerance, double guess){
+      if (n == 0) return 0;
 
       if (Math.abs(n - Math.pow(guess, 2)) < tolerance * n) {
         return guess;
