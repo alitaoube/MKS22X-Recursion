@@ -1,41 +1,6 @@
 import java.util.ArrayList;
 
 public class recursion{
-  public static void main(String[] args) {
-
-    System.out.println("SQRT FUNCTION TESTING");
-    System.out.println(sqrt(572495742, .0000000000001) == Math.sqrt(572495742) ) ;
-    System.out.println(Math.sqrt(572495742));
-    System.out.println(sqrt(572495742, .0000000000001));
-    System.out.println(sqrt(51458921, .1) == Math.sqrt(51458921));
-    System.out.println(sqrt(51458921, .1));
-    System.out.println(Math.sqrt(51458921));
-
-
-    System.out.println();
-
-    System.out.println("FIBBONACI TESTING");
-    System.out.println(fib(0));
-    System.out.println(fib(1));
-    System.out.println(fib(2));
-    System.out.println(fib(3));
-    System.out.println(fib(4));
-    System.out.println(fib(5));
-    System.out.println(fib(6));
-    System.out.println(fib(7));
-    System.out.println(fib(8));
-    System.out.println(fib(9));
-    System.out.println(fib(10));
-
-    System.out.println();
-
-    System.out.println("MAKEALLSUMS TESTING");
-
-    System.out.println(makeAllSums(3));
-    System.out.println(makeAllSums(4));
-    System.out.println(makeAllSums(5));
-
-  }
     /*You may write additional private methods */
 
     /*Recursively find the sqrt using Newton's approximation
@@ -72,6 +37,14 @@ public class recursion{
       ArrayList<Integer> output = new ArrayList<Integer>();
       return mSum(n, 0, output);
     }
+
+    public static boolean closeEnough(double a, double b){
+      if(a==0.0 && b==0.0)return true;
+      if(a==0.0)return b < 0.00000000001;
+      if(b==0.0)return a < 0.00000000001;
+      return Math.abs(a-b)/a < 0.0001;//This is the normal % difference allowed
+    }
+
 
     public static ArrayList<Integer> mSum(int n, int start, ArrayList<Integer> output){
       if (n == 0){
